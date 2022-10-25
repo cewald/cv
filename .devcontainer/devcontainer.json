@@ -1,0 +1,14 @@
+{
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:18",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin"
+      ]
+    }
+  },
+  "forwardPorts": [3000]
+}
