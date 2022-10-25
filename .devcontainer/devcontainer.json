@@ -3,6 +3,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "csstools.postcss",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "Vue.volar",
