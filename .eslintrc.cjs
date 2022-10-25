@@ -11,5 +11,13 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
-  }
+  },
+  overrides: [
+    {
+      files: ['tailwind.config.js', 'postcss.config.js'],
+      env: {
+        node: true
+      }
+    }
+  ]
 }
