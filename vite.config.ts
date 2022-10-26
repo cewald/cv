@@ -3,27 +3,16 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { VitePluginFonts } from 'vite-plugin-fonts'
+import webfontDownload from 'vite-plugin-webfont-dl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    VitePluginFonts({
-      google: {
-        families: [
-          {
-            name: 'Roboto',
-            styles: '400,500'
-          },
-          {
-            name: 'Roboto Mono',
-            styles: '400,700'
-          }
-        ]
-      }
-    })
+    webfontDownload([
+      'https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;700&display=swap'
+    ])
   ],
   resolve: {
     alias: {
