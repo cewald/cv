@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Logo from '@/assets/logo.svg?component'
 </script>
+
 <template>
   <header>
     <Logo />
