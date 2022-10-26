@@ -3,13 +3,13 @@ import Logo from '@/assets/logo.svg?url'
 </script>
 
 <template>
-  <header class="header flex pt-24 font-mono text-gray-default">
+  <header class="header flex font-mono text-gray-default">
     <div class="header__logo flex items-start justify-end">
-      <img :src="Logo" class="fill-gray-default" />
+      <img :src="Logo" alt="Logo" class="fill-gray-default" />
     </div>
     <div class="header__title antialiased">
       <h1 class="font-bold">Christian Ewald</h1>
-      <p class="">
+      <p>
         senior full-stack javascript developer<br />
         and software-engineer
       </p>
@@ -17,28 +17,30 @@ import Logo from '@/assets/logo.svg?url'
   </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 header {
+  font-size: 1em;
+  padding-top: 3.5em;
   .header__logo {
-    width: 24rem + 1.5rem;
-    padding-right: 1.5rem;
+    width: 13em + 1em;
+    padding-right: 1em;
 
     img {
-      width: 9rem;
+      width: 6.5em;
     }
   }
 
   .header__title {
-    margin-top: 2.9rem;
-    line-height: 1.55rem;
+    margin-top: 2em;
+    line-height: 1.2em;
 
     h1 {
-      font-size: 2.225rem;
-      margin-bottom: 0.7rem;
+      font-size: 1.65em;
+      margin-bottom: 0.45em;
     }
 
     p {
-      font-size: 1.11rem;
+      font-size: 0.8em;
     }
   }
 }

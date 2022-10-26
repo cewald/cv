@@ -21,13 +21,19 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 </template>
 
 <style lang="scss">
+@page {
+  size: A4;
+  margin: 0;
+}
+
 .din-container {
+  --pageWidth: calc(794 / 16 * 1em);
   position: relative;
 
   @media screen {
     margin: 0 auto;
     aspect-ratio: 210 / 297;
-    width: 1280px;
+    width: var(--pageWidth);
   }
 }
 </style>
