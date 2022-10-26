@@ -4,8 +4,9 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 </script>
 
 <template>
-  <div class="din-container my-4 p-4 shadow-cnt">
+  <div class="din-container my-4 shadow-cnt print:my-0 print:shadow-none">
     <HeaderBlock />
+    <div class=""></div>
     <HelloWorld msg="Hallo Welt" class="p-8">
       <p>
         Experienced enthusiast in all stages of advanced full-stack development
@@ -21,9 +22,12 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 
 <style lang="scss">
 .din-container {
-  margin: 0 auto;
-  aspect-ratio: 210 / 297;
-  width: 1280px;
   position: relative;
+
+  @media screen {
+    margin: 0 auto;
+    aspect-ratio: 210 / 297;
+    width: 1280px;
+  }
 }
 </style>

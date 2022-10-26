@@ -3,7 +3,7 @@ import Logo from '@/assets/logo.svg?url'
 </script>
 
 <template>
-  <header class="header mt-16 flex font-mono text-gray-default">
+  <header class="header flex pt-24 font-mono text-gray-default">
     <div class="header__logo flex items-start justify-end">
       <img :src="Logo" class="fill-gray-default" />
     </div>
@@ -20,7 +20,8 @@ import Logo from '@/assets/logo.svg?url'
 <style lang="scss" scoped>
 header {
   .header__logo {
-    width: 16rem;
+    width: 24rem + 1.5rem;
+    padding-right: 1.5rem;
 
     img {
       width: 9rem;
@@ -28,7 +29,7 @@ header {
   }
 
   .header__title {
-    margin: 2.9rem 0 0 1.5rem;
+    margin-top: 2.9rem;
     line-height: 1.55rem;
 
     h1 {
