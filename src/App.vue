@@ -25,34 +25,59 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import HeaderBlock from '@/components/HeaderBlock.vue'
 
-import { ref } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
 
 const isFullscreen = ref(false)
+
 const dinPage = ref<HTMLInputElement | null>(null)
 const doc = ref<HTMLElement>(document.documentElement)
+
 const rootEmInPx = ref(parseFloat(getComputedStyle(doc.value).fontSize))
+const oneEmInPx = computed(() => {
+  return parseFloat(getComputedStyle(doc.value).fontSize)
+})
+
+const fullScreenEmPxSize = computed(() => {
+  const dinWidth = dinPage.value?.clientWidth || 0
+  const dinWidthInEm = dinWidth / oneEmInPx.value
+  return winWidth.value / dinWidthInEm
+})
+
+const winWidth = ref(window.innerWidth)
+const onResize = () => {
+  isFullscreen.value = false
+  winWidth.value = window.innerWidth
+}
+
+const resizeRootFont = () => {
+  doc.value.style.setProperty('font-size', `${fullScreenEmPxSize.value}px`)
+}
 
 const toggleFullScreen = () => {
   if (!dinPage.value) return
 
   dinPage.value?.style.setProperty('--oneEmInPx', `${rootEmInPx.value}`)
 
-  const oneEmInPx = parseFloat(getComputedStyle(dinPage.value).fontSize)
-  if (rootEmInPx.value !== oneEmInPx) {
+  if (isFullscreen.value) {
     doc.value.style.removeProperty('font-size')
     isFullscreen.value = false
     return
   }
 
-  const winWidth = window.innerWidth
-  const dinWidth = dinPage.value?.clientWidth || 0
-  const dinWidthInEm = dinWidth / oneEmInPx
-  const fullScreenEmPxSize = winWidth / dinWidthInEm
-
-  doc.value.style.setProperty('font-size', `${fullScreenEmPxSize}px`)
+  resizeRootFont()
 
   isFullscreen.value = true
 }
+
+onMounted(() => {
+  nextTick(() => {
+    window.addEventListener('resize', onResize)
+  })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', onResize)
+})
 </script>
 
 <style lang="scss">
