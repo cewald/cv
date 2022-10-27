@@ -27,7 +27,12 @@ import HeaderBlock from '@/components/HeaderBlock.vue'
 }
 
 .din-container {
-  --pageWidth: calc(794 / 16 * 1em);
+  --pageWidthCm: 21;
+  --oneCmInPx: 96 / 2.54;
+  --oneEmInPx: 16;
+  --pageWidthPx: calc(var(--oneCmInPx) * var(--pageWidthCm));
+  --pageWidth: calc(var(--pageWidthPx) / var(--oneEmInPx) * 1em);
+
   position: relative;
 
   @media screen {

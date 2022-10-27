@@ -17,10 +17,11 @@ import Logo from '@/assets/logo.svg?url'
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   font-size: 1em;
   padding-top: 3.5em;
+
   .header__logo {
     width: 13em + 1em;
     padding-right: 1em;
