@@ -19,29 +19,29 @@ import Logo from '@/assets/logo.svg?url'
 
 <style lang="scss" scoped>
 header {
-  font-size: 1em;
-  padding-top: 3.5em;
+  font-size: 1rem;
+  padding-top: 3.5rem;
 
   .header__logo {
-    width: 13em + 1em;
-    padding-right: 1em;
+    width: 13rem + 1rem;
+    padding-right: 1rem;
 
     img {
-      width: 6.5em;
+      width: 6.5rem;
     }
   }
 
   .header__title {
-    margin-top: 2em;
-    line-height: 1.2em;
+    margin-top: 2rem;
+    line-height: 1.2rem;
 
     h1 {
-      font-size: 1.65em;
-      margin-bottom: 0.45em;
+      font-size: 1.65rem;
+      margin-bottom: 0.45rem;
     }
 
     p {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
   }
 }
