@@ -5,25 +5,25 @@
       isFullscreen ? 'cursor-zoom-out' : 'my-4 cursor-zoom-in shadow-cnt'
     ]"
     ref="dinPage"
-    @click="toggleFullScreen()"
+    @click="toggleFullScreen"
   >
     <HeaderBlock />
-    <HelloWorld msg="Hallo Welt" class="p-8">
-      <p>
+    <div class="p-8">
+      <SectionWrapper title="Profile">
         Experienced enthusiast in all stages of advanced full-stack development
         and engineering with strong knowledge in coding-paradigms,
         continuous-integration, testing and debugging processes. Bringing forth
         experience and expertise in designing, installation, testing and
         maintaining complex code-infrastructure, equipped with a diverse and
         promising skill-set.
-      </p>
-    </HelloWorld>
+      </SectionWrapper>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
 import HeaderBlock from '@/components/HeaderBlock.vue'
+import SectionWrapper from '@/components/SectionWrapper.vue'
 
 import { ref } from 'vue'
 import emScaling from '@/composables/scaleEm'
