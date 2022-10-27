@@ -5,7 +5,7 @@
       isFullscreen ? 'cursor-zoom-out' : 'my-4 cursor-zoom-in shadow-cnt'
     ]"
     ref="dinPage"
-    @click="toggleFullScreen"
+    @click="toggleFullScreen()"
   >
     <HeaderBlock />
     <HelloWorld msg="Hallo Welt" class="p-8">
@@ -25,59 +25,13 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import HeaderBlock from '@/components/HeaderBlock.vue'
 
-import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
-
-const isFullscreen = ref(false)
+import { ref } from 'vue'
+import emScaling from '@/composables/scaleEm'
 
 const dinPage = ref<HTMLInputElement | null>(null)
 const doc = ref<HTMLElement>(document.documentElement)
 
-const rootEmInPx = ref(parseFloat(getComputedStyle(doc.value).fontSize))
-const oneEmInPx = computed(() => {
-  return parseFloat(getComputedStyle(doc.value).fontSize)
-})
-
-const fullScreenEmPxSize = computed(() => {
-  const dinWidth = dinPage.value?.clientWidth || 0
-  const dinWidthInEm = dinWidth / oneEmInPx.value
-  return winWidth.value / dinWidthInEm
-})
-
-const winWidth = ref(window.innerWidth)
-const onResize = () => {
-  isFullscreen.value = false
-  winWidth.value = window.innerWidth
-}
-
-const resizeRootFont = () => {
-  doc.value.style.setProperty('font-size', `${fullScreenEmPxSize.value}px`)
-}
-
-const toggleFullScreen = () => {
-  if (!dinPage.value) return
-
-  dinPage.value?.style.setProperty('--oneEmInPx', `${rootEmInPx.value}`)
-
-  if (isFullscreen.value) {
-    doc.value.style.removeProperty('font-size')
-    isFullscreen.value = false
-    return
-  }
-
-  resizeRootFont()
-
-  isFullscreen.value = true
-}
-
-onMounted(() => {
-  nextTick(() => {
-    window.addEventListener('resize', onResize)
-  })
-})
-
-onUnmounted(() => {
-  window.removeEventListener('resize', onResize)
-})
+const { isFullscreen, toggleFullScreen } = emScaling(dinPage, doc)
 </script>
 
 <style lang="scss">
