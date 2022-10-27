@@ -9,23 +9,55 @@
   >
     <HeaderBlock />
     <div class="flex grow px-12 py-8">
-      <div class="w-40 border-r border-gray-300 pt-4 pr-12">
+      <div class="w-42 border-r border-gray-300 pt-4 pr-12">
         <SectionWrapper title="Details">
-          Address<br />
+          <h3>Address</h3>
           <p>
             Fregestr. 26<br />
             04105 Leipzig<br />
             Germany
           </p>
+          <h3>Phone</h3>
           <p>
-            Phone<br />
-            +49 (0) 163 877 822 8<br />
-            Email<br />
-            hello@christianewald.de
+            <a href="tel:+491638778228"> +49 (0) 163 877 822 8 </a>
           </p>
+          <h3>Email</h3>
+          <p>
+            <a
+              href="mailto:hello@christianewald.de"
+              title="Email"
+              target="_blank"
+            >
+              hello@christianewald.de
+            </a>
+          </p>
+          <h3>DOB</h3>
+          <p>14.06.1987</p>
+        </SectionWrapper>
+        <SectionWrapper title="Links">
+          <a href="https://www.christianewald.de" target="_blank">
+            www.christianewald.de
+          </a>
+          <br />
+          <a href="https://github.com/cewald" target="_blank">
+            github.com/cewald
+          </a>
+          <br />
+          <a href="https://linkedin.com/in/ewaldtm" target="_blank">
+            linkedin.com/in/ewaldtm
+          </a>
+        </SectionWrapper>
+        <SectionWrapper title="Languages">
+          German
+          <span class="text-xxs text-gray-light">_native speaker</span><br />
+          English
+          <span class="text-xxs text-gray-light">_highly proficient</span>
+        </SectionWrapper>
+        <SectionWrapper title="Persona">
+          _my dog _books _art _running _3d printing _coffee _woodworking
         </SectionWrapper>
       </div>
-      <div class="w-2/3 grow pt-4 pl-12">
+      <div class="pt-4 pl-12">
         <SectionWrapper title="Profile">
           Experienced enthusiast in all stages of advanced full-stack
           development and engineering with strong knowledge in coding-paradigms,
@@ -33,6 +65,9 @@
           forth experience and expertise in designing, installation, testing and
           maintaining complex code-infrastructure, equipped with a diverse and
           promising skill-set.
+        </SectionWrapper>
+        <SectionWrapper title="Skillset " sub-title="_chronolocical">
+          ... lorem ipsum
         </SectionWrapper>
       </div>
     </div>

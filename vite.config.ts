@@ -13,7 +13,7 @@ export default defineConfig({
     vueJsx(),
     svgLoader(),
     webfontDownload([
-      'https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;700&display=swap'
+      'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Mono:wght@400;700&display=swap'
     ])
   ],
   resolve: {

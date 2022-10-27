@@ -3,7 +3,7 @@ import Logo from '@/assets/logo.svg?url'
 </script>
 
 <template>
-  <header class="header flex font-mono text-gray-default">
+  <header class="header flex font-mono text-gray-dark">
     <div class="header__logo flex items-start justify-end">
       <img :src="Logo" alt="Logo" class="fill-gray-default" />
     </div>
