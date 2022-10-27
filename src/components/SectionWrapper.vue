@@ -8,8 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <div>
+  <section class="text-xs antialiased">
     <SectionTitle :title="title" :sub-title="subTitle" />
     <slot />
-  </div>
+  </section>
 </template>

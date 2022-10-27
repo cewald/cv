@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <h1 class="mb-4 border-gray-600 text-xl">
+  <h1 class="mb-4 border-black font-mono text-lg font-bold">
     {{ title }}
     <span v-if="subTitle">{{ subTitle }}</span>
   </h1>
