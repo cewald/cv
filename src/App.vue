@@ -116,6 +116,12 @@ const { isFullscreen, toggleFullScreen } = emScaling(dinPage, doc)
   margin: 0;
 }
 
+:root {
+  @media print {
+    font-size: 16px !important;
+  }
+}
+
 .din-container {
   --pageWidthCm: 21;
   --oneCmInPx: 96 / 2.54;
