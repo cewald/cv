@@ -47,7 +47,7 @@
             target="_blank"
             class="mb-1.5 flex items-center hover:underline"
           >
-            <IconLanguage class="mr-1.5" width="1.1rem" height="1.1rem" />
+            <IconLanguage class="mr-1.5 flex-fix" width="1rem" height="1rem" />
             www.christianewald.de
           </a>
           <a
@@ -55,7 +55,7 @@
             target="_blank"
             class="mb-1.5 flex items-center hover:underline"
           >
-            <IconGitHub class="mr-1.5" width="1.1rem" height="1.1rem" />
+            <IconGitHub class="mr-1.5 flex-fix" width="1rem" height="1rem" />
             github.com/cewald
           </a>
           <a
@@ -63,7 +63,7 @@
             target="_blank"
             class="flex items-center hover:underline"
           >
-            <IconLinkedIn class="mr-1.5" width="1.1rem" height="1.1rem" />
+            <IconLinkedIn class="mr-1.5 flex-fix" width="1rem" height="1rem" />
             linkedin.com/in/ewaldtm
           </a>
         </SectionWrapper>
@@ -73,9 +73,9 @@
           English
           <span class="text-xxs text-gray-light">_highly proficient</span>
         </SectionWrapper>
-        <SectionWrapper title="Persona">
+        <!--SectionWrapper title="Persona">
           _my dog _books _art _running _3d printing _coffee _woodworking
-        </SectionWrapper>
+        </SectionWrapper-->
       </div>
       <div class="pt-4 pl-12">
         <SectionWrapper title="Profile">

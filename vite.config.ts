@@ -16,9 +16,7 @@ export default defineConfig({
     webfontDownload([
       'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Mono:wght@400;700&display=swap'
     ]),
-    Icons({
-      autoInstall: true
-    })
+    Icons({})
   ],
   resolve: {
     alias: {
