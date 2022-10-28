@@ -9,7 +9,7 @@
   >
     <HeaderBlock />
     <div class="flex grow px-12 py-8">
-      <div class="w-42 border-r border-gray-300 pt-4 pr-12">
+      <div class="flex w-42 flex-col border-r border-gray-300 pt-4 pr-12">
         <SectionWrapper title="Details">
           <h3>Address</h3>
           <p>
@@ -73,9 +73,8 @@
           English
           <span class="text-xxs text-gray-light">_highly proficient</span>
         </SectionWrapper>
-        <!--SectionWrapper title="Persona">
-          _my dog _books _art _running _3d printing _coffee _woodworking
-        </SectionWrapper-->
+        <div class="grow"></div>
+        <img :src="QRCode" class="mb-4 h-20 w-20" />
       </div>
       <div class="pt-4 pl-12">
         <SectionWrapper title="Profile">
@@ -100,6 +99,7 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 import IconGitHub from '~icons/fa-brands/github'
 import IconLinkedIn from '~icons/fa-brands/linkedin'
 import IconLanguage from '~icons/fa6-regular/id-card'
+import QRCode from '@/assets/qrcode.svg?url'
 
 import { ref } from 'vue'
 import emScaling from '@/composables/scaleEm'

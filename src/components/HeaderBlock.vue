@@ -5,7 +5,7 @@ import Logo from '@/assets/logo.svg?url'
 <template>
   <header class="header flex font-mono text-gray-dark">
     <div class="header__logo flex items-start justify-end">
-      <img :src="Logo" alt="Logo" class="fill-gray-default" />
+      <img :src="Logo" alt="Logo" />
     </div>
     <div class="header__title antialiased">
       <h1 class="font-bold">Christian Ewald</h1>
