@@ -19,7 +19,13 @@
           </p>
           <h3>Phone</h3>
           <p>
-            <a href="tel:+491638778228"> +49 (0) 163 877 822 8 </a>
+            <a
+              href="tel:+491638778228"
+              title="Telephone"
+              class="hover:underline"
+            >
+              +49 (0) 163 877 822 8
+            </a>
           </p>
           <h3>Email</h3>
           <p>
@@ -27,6 +33,7 @@
               href="mailto:hello@christianewald.de"
               title="Email"
               target="_blank"
+              class="hover:underline"
             >
               hello@christianewald.de
             </a>
@@ -35,15 +42,28 @@
           <p>14.06.1987</p>
         </SectionWrapper>
         <SectionWrapper title="Links">
-          <a href="https://www.christianewald.de" target="_blank">
+          <a
+            href="https://www.christianewald.de"
+            target="_blank"
+            class="mb-1.5 flex items-center hover:underline"
+          >
+            <IconLanguage class="mr-1.5" width="1.1rem" height="1.1rem" />
             www.christianewald.de
           </a>
-          <br />
-          <a href="https://github.com/cewald" target="_blank">
+          <a
+            href="https://github.com/cewald"
+            target="_blank"
+            class="mb-1.5 flex items-center hover:underline"
+          >
+            <IconGitHub class="mr-1.5" width="1.1rem" height="1.1rem" />
             github.com/cewald
           </a>
-          <br />
-          <a href="https://linkedin.com/in/ewaldtm" target="_blank">
+          <a
+            href="https://linkedin.com/in/ewaldtm"
+            target="_blank"
+            class="flex items-center hover:underline"
+          >
+            <IconLinkedIn class="mr-1.5" width="1.1rem" height="1.1rem" />
             linkedin.com/in/ewaldtm
           </a>
         </SectionWrapper>
@@ -77,6 +97,9 @@
 <script setup lang="ts">
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import SectionWrapper from '@/components/SectionWrapper.vue'
+import IconGitHub from '~icons/fa-brands/github'
+import IconLinkedIn from '~icons/fa-brands/linkedin'
+import IconLanguage from '~icons/fa6-regular/id-card'
 
 import { ref } from 'vue'
 import emScaling from '@/composables/scaleEm'

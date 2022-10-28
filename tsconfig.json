@@ -6,7 +6,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite-svg-loader"]
+    "types": ["vite-svg-loader", "unplugin-icons/types/vue"]
   },
 
   "references": [
