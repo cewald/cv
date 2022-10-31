@@ -86,7 +86,10 @@
           promising skill-set.
         </SectionWrapper>
         <SectionWrapper title="Skillset " sub-title="_chronolocical">
-          ... lorem ipsum
+          ... more
+        </SectionWrapper>
+        <SectionWrapper title="Skillset" sub-title="_pills">
+          <SkillPills />
         </SectionWrapper>
       </div>
     </div>
@@ -96,6 +99,7 @@
 <script setup lang="ts">
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import SectionWrapper from '@/components/SectionWrapper.vue'
+import SkillPills from '@/components/SkillPills.vue'
 import IconGitHub from '~icons/fa-brands/github'
 import IconLinkedIn from '~icons/fa-brands/linkedin'
 import IconLanguage from '~icons/fa6-regular/id-card'
