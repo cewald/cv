@@ -130,10 +130,10 @@ const { isFullscreen, toggleFullScreen } = emScaling(dinPage, doc)
   --pageWidth: calc(var(--pageWidthPx) / var(--oneEmInPx) * 1em);
 
   position: relative;
+  aspect-ratio: 210 / 297;
 
   @media screen {
     margin: 0 auto;
-    aspect-ratio: 210 / 297;
     width: var(--pageWidth);
   }
 }
