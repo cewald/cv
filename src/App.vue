@@ -86,7 +86,7 @@
           equipped with a diverse and promising skill-set.
         </SectionWrapper>
         <SectionWrapper title="Skillset " sub-title="_chronolocical">
-          ... more
+          <SkillGantt />
         </SectionWrapper>
       </div>
     </div>
@@ -96,6 +96,7 @@
 <script setup lang="ts">
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import SectionWrapper from '@/components/SectionWrapper.vue'
+import SkillGantt from '@/components/SkillGantt.vue'
 import IconGitHub from '~icons/fa-brands/github'
 import IconLinkedIn from '~icons/fa-brands/linkedin'
 import IconLanguage from '~icons/fa6-regular/id-card'

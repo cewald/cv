@@ -5,55 +5,55 @@
         {
            "title":"javascript",
            "timeslots":[
-              
+              "2010"
            ]
         },
         {
            "title":"nodejs",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"typescript",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"vuejs",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"vue-storefront",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"magento",
            "timeslots":[
-              
+              "2010"
            ]
         },
         {
            "title":"webpack",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"vite",
            "timeslots":[
-              
+              "2021"
            ]
         },
         {
            "title":"esbuild",
            "timeslots":[
-              
+            "2021"
            ]
         }
      ]
@@ -70,19 +70,19 @@
         {
            "title":"nuxt",
            "timeslots":[
-              
+              "2020"
            ]
         },
         {
            "title":"php",
            "timeslots":[
-              
+              "2010"
            ]
         },
         {
            "title":"nginx",
            "timeslots":[
-              
+              "2015"
            ]
         }
      ]
@@ -93,61 +93,61 @@
         {
            "title":"jest",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"cypress-io",
            "timeslots":[
-              
+            "2018"
            ]
         },
         {
            "title":"codeception",
            "timeslots":[
-              
+            "2012-2018"
            ]
         },
         {
            "title":"continous-integration",
            "timeslots":[
-              
+              "2015"
            ]
         },
         {
            "title":"continous-deployment",
            "timeslots":[
-              
+            "2017"
            ]
         },
         {
            "title":"test-driven development",
            "timeslots":[
-              
+            "2017-2020"
            ]
         },
         {
            "title":"automated-testing",
            "timeslots":[
-              
+            "2015"
            ]
         },
         {
            "title":"github-actions",
            "timeslots":[
-              
+              "2020"
            ]
         },
         {
            "title":"gitlab-pipelines",
            "timeslots":[
-              
+              "2015-2019"
            ]
         },
         {
            "title":"git",
            "timeslots":[
-              
+              "2012"
            ]
         }
      ]
@@ -158,55 +158,55 @@
         {
            "title":"docker",
            "timeslots":[
-              
+            "2016"
            ]
         },
         {
            "title":"gcp",
            "timeslots":[
-              
+            "2020"
            ]
         },
         {
            "title":"app-engine",
            "timeslots":[
-              
+            "2020"
            ]
         },
         {
            "title":"cloud-run",
            "timeslots":[
-              
+            "2020"
            ]
         },
         {
            "title":"firebase",
            "timeslots":[
-              
+            "2020"
            ]
         },
         {
            "title":"aws",
            "timeslots":[
-              
+            "2015-2020"
            ]
         },
         {
            "title":"netlify",
            "timeslots":[
-              
+             "2020"
            ]
         },
         {
            "title":"kubernetes",
            "timeslots":[
-              
+             "2018-2020" 
            ]
         },
         {
            "title":"helmet",
            "timeslots":[
-              
+            "2018-2020"
            ]
         }
      ]
@@ -217,25 +217,25 @@
         {
            "title":"elasticsearch",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"mysql",
            "timeslots":[
-              
+              "2010"
            ]
         },
         {
            "title":"redis",
            "timeslots":[
-              
+              "2015"
            ]
         },
         {
            "title":"firestore",
            "timeslots":[
-              
+              "2020"
            ]
         }
      ]
@@ -246,19 +246,19 @@
         {
            "title":"microservice",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"headless",
            "timeslots":[
-              
+              "2018"
            ]
         },
         {
            "title":"serverless",
            "timeslots":[
-              
+              "2020"
            ]
         }
      ]
@@ -269,19 +269,19 @@
         {
            "title":"lighthouse",
            "timeslots":[
-              
+              "2019"
            ]
         },
         {
            "title":"web-vitals",
            "timeslots":[
-              
+              "2020"
            ]
         },
         {
            "title":"structured-data",
            "timeslots":[
-              
+              "2020"
            ]
         }
      ]
