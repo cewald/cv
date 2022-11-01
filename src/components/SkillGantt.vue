@@ -1,31 +1,65 @@
 <template>
-  {{ startDate.getFullYear() }} -
-  {{ endDate.getFullYear() }}
+  <div v-for="section in skillset" :key="section.section" class="hidden">
+    <h3>{{ section.section }}</h3>
+    <div v-for="skill in section.skills" :key="skill.title">
+      {{ skill.timeslots }} – {{ skill.title }}
+    </div>
+  </div>
 </template>
 <script lang="ts">
+import { ref } from 'vue'
 import Skillset from '@/data/skillset.json'
+
+type SkillSetSkill = {
+  title: string
+  timeslots: string[]
+  timestampedTimeslots: { start: Date; stop?: Date }[]
+  percentTimeslots: { start: Number; stop?: Number }[]
+}
+
+type SkillSetSection = {
+  section: string
+  skills: SkillSetSkill[]
+}
+
 export default {
+  setup() {
+    const skillset = ref(Skillset)
+    return {
+      skillset
+    }
+  },
   computed: {
-    skillset() {
-      return Skillset
+    skillsetStruct() {
+      return ([...Skillset] as SkillSetSection[]).map((section) => {
+        section.skills.map((skill) => {
+          skill.timestampedTimeslots = skill.timeslots.map((s) => {
+            const [start, stop] = s.split('-').map((v) => new Date(v))
+            return { start, stop }
+          })
+
+          const startTS = this.startDate.getTime()
+          const endTS = this.endDate.getTime()
+
+          return skill
+        })
+        return section
+      })
     },
     startDate() {
-      const startSlots: number[] = []
+      const slots: number[] = []
       Skillset.forEach((section) => {
         for (const skill of section.skills) {
-          startSlots.push(
-            ...skill.timeslots.map(
-              (slot) => slot.split('-').map((v) => parseInt(v))[0]
-            )
+          const startSlots = skill.timeslots.map(
+            (s) => s.split('-').map((v) => parseInt(v))[0]
           )
+
+          slots.push(...startSlots)
         }
       })
 
-      const yearAsString = startSlots
-        .reduce((a, b) => (a > b ? b : a))
-        .toString()
-
-      return new Date(yearAsString)
+      const firstYear = slots.reduce((a, b) => (a > b ? b : a))
+      return new Date(firstYear.toString())
     },
     endDate() {
       return new Date()
