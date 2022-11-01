@@ -1,36 +1,31 @@
 <template>
   <div class="flex justify-between">
-    <div class="pl-4">{{ startDate.getFullYear() }}</div>
     <div>{{ endDate.getFullYear() }}</div>
+    <div>{{ yearScale }}</div>
+    <div>{{ startDate.getFullYear() }}</div>
   </div>
-  <div
-    v-for="{ section, skills } in skillsetStruct"
-    :key="section"
-    class="flex flex-wrap"
-  >
-    <div class="flex w-4 flex-fix">
-      <div class="-rotate-90">{{ section }}</div>
-    </div>
-    <div class="grow">
-      <div
-        v-for="{ title, percentTimeslots } in skills"
-        :key="title"
-        class="mb-2 flex"
-      >
-        <div class="flex w-full">
+  <div v-for="{ section, skills } in skillsetStruct" :key="section">
+    <div
+      v-for="{ title, percentTimeslots } in skills"
+      :key="title"
+      class="mb-1 flex"
+    >
+      <div class="flex w-full font-mono">
+        <template
+          v-for="({ width, start }, i) in percentTimeslots"
+          :key="`bar-${title}-${i}`"
+        >
           <div
-            :style="{ width: percentTimeslots[0].start + '%' }"
-            class="font-mono"
-          >
-            {{ title }}
-          </div>
-          <div
-            v-for="({ start, stop }, i) in percentTimeslots"
-            :key="`bar-${title}-${i}`"
-            class="h-full rounded bg-gray-lighter opacity-30"
-            :style="{ width: 100 - start - ((stop || 0) - start) + '%' }"
+            :style="{ width: 100 - start - width + '%' }"
+            class="text-right text-gray-lighter"
           />
-        </div>
+          <div
+            class="h-full flex-fix whitespace-nowrap rounded bg-gray-lightest pl-2 text-gray-lighter"
+            :style="{ width: width + '%' }"
+          >
+            {{ start >= 30 || width >= 30 ? title : '' }}
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -43,7 +38,7 @@ type SkillSetSkill = {
   title: string
   timeslots: string[]
   timestampedTimeslots: { start: Date; stop?: Date }[]
-  percentTimeslots: { start: number; stop?: number }[]
+  percentTimeslots: { start: number; stop?: number; width: number }[]
 }
 
 type SkillSetSection = {
@@ -70,10 +65,16 @@ export default {
             return { start, stop }
           })
 
-          skill.percentTimeslots = skill.timestampedTimeslots.map((i) => ({
-            start: this.timeStampToPercent(i.start),
-            stop: i.stop ? this.timeStampToPercent(i.stop) : undefined
-          }))
+          skill.percentTimeslots = skill.timestampedTimeslots
+            .map((i) => ({
+              start: this.timeStampToPercent(i.start),
+              stop: i.stop ? this.timeStampToPercent(i.stop) : undefined
+            }))
+            .map(({ start, stop }) => {
+              const width: number =
+                stop && stop > 0 ? stop - start : 100 - start
+              return { start, stop, width }
+            })
 
           return skill
         })
@@ -94,6 +95,19 @@ export default {
 
       const firstYear = slots.reduce((a, b) => (a > b ? b : a))
       return new Date(firstYear.toString())
+    },
+    yearScale() {
+      const scale = this.endDate.getFullYear() - this.startDate.getFullYear()
+      const test = Array(scale / 4)
+
+      const years = [this.endDate.getFullYear()]
+      // for (const i = this.endDate.getFullYear(); i) {
+      //   years.push(this.endDate.getFullYear() - i * test)
+      // }
+
+      console.error(test)
+
+      return years
     }
   },
   methods: {

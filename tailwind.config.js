@@ -17,6 +17,7 @@ module.exports = {
         mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono]
       },
       colors: {
+        'gray-lightest': '#eeeeee',
         'gray-lighter': '#999999',
         'gray-light': '#666666',
         'gray-base': '#1A1A1A',
