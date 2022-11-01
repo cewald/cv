@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap items-center">
-    <template v-for="(skills, title) in Skillset" :key="title">
+    <template v-for="(skills, title) in skillpills" :key="title">
       <div v-text="`${title}:/`" class="mr-1 text-gray-lighter" />
       <div
         v-for="(skill, i) in skills"
@@ -15,5 +15,11 @@
 </template>
 
 <script lang="ts" setup>
+import { reactive } from 'vue'
 import Skillset from '@/data/skillset.json'
+
+const skillpills = reactive<Record<string, string[]>>({})
+for (const item of Skillset) {
+  skillpills[item.section] = item.skills.map((s) => s.title)
+}
 </script>

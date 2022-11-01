@@ -1,58 +1,289 @@
-{
-  "frontend":[
-     "javascript",
-     "nodejs",
-     "typescript",
-     "vuejs",
-     "vue-storefront",
-     "magento",
-     "webpack",
-     "vite",
-     "esbuild"
-  ],
-  "server-side":[
-     "nodejs",
-     "nuxt",
-     "php",
-     "nginx"
-  ],
-  "dev-ops":[
-     "jest",
-     "cypress-io",
-     "codeception",
-     "continous-integration",
-     "continous-deployment",
-     "test-driven development",
-     "automated-testing",
-     "github-actions",
-     "gitlab-pipelines",
-     "git"
-  ],
-  "architecture":[
-     "docker",
-     "gcp",
-     "app-engine",
-     "cloud-run",
-     "firebase",
-     "aws",
-     "netlify",
-     "kubernetes",
-     "helmet"
-  ],
-  "data":[
-     "elasticsearch",
-     "mysql",
-     "redis",
-     "firestore"
-  ],
-  "paradigm":[
-     "microservice",
-     "headless",
-     "serverless"
-  ],
-  "seo":[
-     "lighthouse",
-     "web-vitals",
-     "structured-data"
-  ]
-}
+[
+  {
+     "section":"frontend",
+     "skills":[
+        {
+           "title":"javascript",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"nodejs",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"typescript",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"vuejs",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"vue-storefront",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"magento",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"webpack",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"vite",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"esbuild",
+           "timeslots":[
+              
+           ]
+        }
+     ]
+  },
+  {
+     "section":"server-side",
+     "skills":[
+        {
+           "title":"nodejs",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"nuxt",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"php",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"nginx",
+           "timeslots":[
+              
+           ]
+        }
+     ]
+  },
+  {
+     "section":"dev-ops",
+     "skills":[
+        {
+           "title":"jest",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"cypress-io",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"codeception",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"continous-integration",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"continous-deployment",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"test-driven development",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"automated-testing",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"github-actions",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"gitlab-pipelines",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"git",
+           "timeslots":[
+              
+           ]
+        }
+     ]
+  },
+  {
+     "section":"architecture",
+     "skills":[
+        {
+           "title":"docker",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"gcp",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"app-engine",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"cloud-run",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"firebase",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"aws",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"netlify",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"kubernetes",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"helmet",
+           "timeslots":[
+              
+           ]
+        }
+     ]
+  },
+  {
+     "section":"data",
+     "skills":[
+        {
+           "title":"elasticsearch",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"mysql",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"redis",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"firestore",
+           "timeslots":[
+              
+           ]
+        }
+     ]
+  },
+  {
+     "section":"paradigm",
+     "skills":[
+        {
+           "title":"microservice",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"headless",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"serverless",
+           "timeslots":[
+              
+           ]
+        }
+     ]
+  },
+  {
+     "section":"seo",
+     "skills":[
+        {
+           "title":"lighthouse",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"web-vitals",
+           "timeslots":[
+              
+           ]
+        },
+        {
+           "title":"structured-data",
+           "timeslots":[
+              
+           ]
+        }
+     ]
+  }
+]

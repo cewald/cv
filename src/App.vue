@@ -78,18 +78,15 @@
       </div>
       <div class="pt-4 pl-12">
         <SectionWrapper title="Profile">
-          Experienced enthusiast in all stages of advanced full-stack
-          development and engineering with strong knowledge in coding-paradigms,
-          continuous-integration, testing and debugging processes. Bringing
-          forth experience and expertise in designing, installation, testing and
-          maintaining complex code-infrastructure, equipped with a diverse and
-          promising skill-set.
+          I'm an experienced enthusiast in all stages of advanced full-stack
+          development and engineering, with strong knowledge in
+          coding-paradigms, continuous-integration, testing and debugging
+          processes. Bringing forth experience and expertise in designing,
+          installation, testing and maintaining complex code-infrastructure,
+          equipped with a diverse and promising skill-set.
         </SectionWrapper>
         <SectionWrapper title="Skillset " sub-title="_chronolocical">
           ... more
-        </SectionWrapper>
-        <SectionWrapper title="Skillset" sub-title="_pills">
-          <SkillPills />
         </SectionWrapper>
       </div>
     </div>
@@ -99,7 +96,6 @@
 <script setup lang="ts">
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import SectionWrapper from '@/components/SectionWrapper.vue'
-import SkillPills from '@/components/SkillPills.vue'
 import IconGitHub from '~icons/fa-brands/github'
 import IconLinkedIn from '~icons/fa-brands/linkedin'
 import IconLanguage from '~icons/fa6-regular/id-card'
