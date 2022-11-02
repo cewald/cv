@@ -1,30 +1,34 @@
 <template>
-  <div class="flex justify-between">
+  <div class="mb-2 flex justify-between font-mono">
     <div v-for="year in yearScale" :key="`year-scale-${year}`" v-text="year" />
   </div>
-  <div v-for="{ section, skills } in skillsetStruct" :key="section">
+  <div
+    v-for="{ section, skills } in skillsetStruct"
+    :key="'section' + section"
+    class="mb-2"
+  >
+    <div class="font-mono text-gray-light" v-text="section" />
     <div
       v-for="{ title, percentTimeslots } in skills"
       :key="title"
-      class="mb-1 flex"
+      class="flex items-center leading-snug"
     >
-      <div class="flex w-full font-mono">
-        <template
-          v-for="({ width, start }, i) in percentTimeslots"
-          :key="`bar-${title}-${i}`"
-        >
-          <div
-            :style="{ width: 100 - start - width + '%' }"
-            class="text-right text-gray-lighter"
-          />
-          <div
-            class="h-full flex-fix whitespace-nowrap rounded bg-gray-lightest pl-2 text-gray-lighter"
-            :style="{ width: width + '%' }"
-          >
-            {{ start >= 30 || width >= 30 ? title : '' }}
-          </div>
-        </template>
-      </div>
+      <template
+        v-for="({ width, start }, i) in percentTimeslots"
+        :key="'bar-' + title + i"
+      >
+        <div
+          :style="{ width: 100 - start - width + '%' }"
+          v-if="100 - start - width > 0"
+          class="flex-fix"
+        />
+        <div
+          class="h-3 rounded bg-gray-lightest text-right"
+          :class="[start === 0 ? 'flex-auto' : 'flex-fix']"
+          :style="{ width: width + '%' }"
+        />
+        <div v-text="title" class="flex-auto pl-2 text-gray-light" />
+      </template>
     </div>
   </div>
 </template>
@@ -36,7 +40,11 @@ type SkillSetSkill = {
   title: string
   timeslots: string[]
   timestampedTimeslots: { start: Date; stop?: Date }[]
-  percentTimeslots: { start: number; stop?: number; width: number }[]
+  percentTimeslots: {
+    start: number
+    stop?: number
+    width: number
+  }[]
 }
 
 type SkillSetSection = {
@@ -58,16 +66,19 @@ export default {
     skillsetStruct() {
       return ([...this.skillset] as SkillSetSection[]).map((section) => {
         section.skills.map((skill) => {
+          // Map year as JS date
           skill.timestampedTimeslots = skill.timeslots.map((s) => {
             const [start, stop] = s.split('-').map((v) => new Date(v))
             return { start, stop }
           })
 
           skill.percentTimeslots = skill.timestampedTimeslots
+            // Map start/stop time in %
             .map((i) => ({
               start: this.timeStampToPercent(i.start),
               stop: i.stop ? this.timeStampToPercent(i.stop) : undefined
             }))
+            // Map bar-width in %
             .map(({ start, stop }) => {
               const width: number =
                 stop && stop > 0 ? stop - start : 100 - start
