@@ -121,12 +121,6 @@
            ]
         },
         {
-           "title":"automated-testing",
-           "timeslots":[
-            "2015"
-           ]
-        },
-        {
            "title":"github-actions",
            "timeslots":[
               "2019"
@@ -141,7 +135,7 @@
         {
            "title":"git",
            "timeslots":[
-              "2012"
+              "2011"
            ]
         }
      ]
@@ -157,24 +151,7 @@
         },
         {
            "title":"gcp",
-           "timeslots":[
-            "2020"
-           ]
-        },
-        {
-           "title":"app-engine",
-           "timeslots":[
-            "2020"
-           ]
-        },
-        {
-           "title":"cloud-run",
-           "timeslots":[
-            "2020"
-           ]
-        },
-        {
-           "title":"firebase",
+           "subTitle": "app-engine / cloud-run / firebase",
            "timeslots":[
             "2020"
            ]
@@ -186,13 +163,8 @@
            ]
         },
         {
-           "title":"netlify",
-           "timeslots":[
-             "2020"
-           ]
-        },
-        {
-           "title":"kubernetes /w helmet",
+           "title":"kubernetes",
+           "subTitle": " /w helmet",
            "timeslots":[
              "2018-2020" 
            ]

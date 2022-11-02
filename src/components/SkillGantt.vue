@@ -9,7 +9,7 @@
   >
     <div class="font-mono text-gray-light" v-text="section" />
     <div
-      v-for="{ title, percentTimeslots } in skills"
+      v-for="{ title, subTitle, percentTimeslots } in skills"
       :key="title"
       class="flex items-center leading-snug"
     >
@@ -27,7 +27,14 @@
           :class="[start === 0 ? 'flex-auto' : 'flex-fix']"
           :style="{ width: width + '%' }"
         />
-        <div v-text="title" class="flex-auto pl-2 text-gray-light" />
+        <div class="flex-auto pl-2 text-gray-light">
+          {{ title }}
+          <span
+            v-if="subTitle"
+            v-text="subTitle"
+            class="text-xxs text-gray-lighter"
+          />
+        </div>
       </template>
     </div>
   </div>
@@ -38,6 +45,7 @@ import Skillset from '@/data/skillset.json'
 
 type SkillSetSkill = {
   title: string
+  subTitle?: string
   timeslots: string[]
   timestampedTimeslots: { start: Date; stop?: Date }[]
   percentTimeslots: {
