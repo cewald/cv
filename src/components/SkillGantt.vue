@@ -1,20 +1,25 @@
 <template>
-  <div class="mb-2 flex justify-between font-mono">
-    <div v-for="year in yearScale" :key="`year-scale-${year}`" v-text="year" />
+  <div class="mb-1 flex justify-between font-mono text-xxs">
+    <div
+      v-for="(year, i) in yearScale"
+      :key="`year-scale-${year}`"
+      v-text="year"
+      class="border-r border-gray-lightest-1 pr-1"
+    />
   </div>
   <div
     v-for="{ section, skills } in skillsetStruct"
     :key="'section' + section"
-    class="mb-2"
+    class="mb-1 text-xxxs"
   >
     <div class="flex items-baseline font-mono text-gray-lighter">
       <div class="mr-0.5 h-3 w-1.5 border-b border-gray-lighter" />
-      <div class="mb-0 text-xs">{{ section }}</div>
+      <div class="mb-0 text-xxs">{{ section }}</div>
     </div>
     <div
       v-for="{ title, subTitle, percentTimeslots } in skills"
       :key="title"
-      class="flex items-center leading-snug"
+      class="flex items-center leading-tight"
     >
       <template
         v-for="({ width, start }, i) in percentTimeslots"
@@ -26,17 +31,13 @@
           class="flex-fix"
         />
         <div
-          class="h-3 rounded bg-gray-lightest-1 text-right"
+          class="h-2.5 rounded-sm bg-gray-lightest-1 text-right"
           :class="[start === 0 ? 'flex-auto' : 'flex-fix']"
           :style="{ width: width + '%' }"
         />
-        <div class="flex-auto pl-2 text-gray-light">
+        <div class="flex-auto pl-1 text-gray-light">
           {{ title }}
-          <span
-            v-if="subTitle"
-            v-text="subTitle"
-            class="text-xxs text-gray-lighter"
-          />
+          <span v-if="subTitle" v-text="subTitle" class="text-gray-lighter" />
         </div>
       </template>
     </div>

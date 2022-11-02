@@ -10,7 +10,8 @@ module.exports = {
         42: '11rem'
       },
       fontSize: {
-        xxs: '0.6rem'
+        xxs: '0.7rem',
+        xxxs: '0.6rem'
       },
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
