@@ -1,8 +1,6 @@
 <template>
   <div class="flex justify-between">
-    <div>{{ endDate.getFullYear() }}</div>
-    <div>{{ yearScale }}</div>
-    <div>{{ startDate.getFullYear() }}</div>
+    <div v-for="year in yearScale" :key="`year-scale-${year}`" v-text="year" />
   </div>
   <div v-for="{ section, skills } in skillsetStruct" :key="section">
     <div
@@ -97,17 +95,13 @@ export default {
       return new Date(firstYear.toString())
     },
     yearScale() {
-      const scale = this.endDate.getFullYear() - this.startDate.getFullYear()
-      const test = Array(scale / 4)
-
-      const years = [this.endDate.getFullYear()]
-      // for (const i = this.endDate.getFullYear(); i) {
-      //   years.push(this.endDate.getFullYear() - i * test)
-      // }
-
-      console.error(test)
-
-      return years
+      return this.getRange(
+        this.endDate.getFullYear(),
+        this.startDate.getFullYear(),
+        4
+      )
+        .map((y) => Math.round(y))
+        .reverse()
     }
   },
   methods: {
@@ -117,6 +111,17 @@ export default {
       const scale = end - start
       const point = timestamp.getTime() - start
       return Math.round((point * 100) / scale)
+    },
+    getRange(upper: number, lower: number, steps: number) {
+      const difference = upper - lower
+      const increment = difference / (steps - 1)
+      return [
+        lower,
+        ...Array(steps - 2)
+          .fill('')
+          .map((_, index) => lower + increment * (index + 1)),
+        upper
+      ]
     }
   }
 }

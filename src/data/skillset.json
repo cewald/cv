@@ -129,7 +129,7 @@
         {
            "title":"github-actions",
            "timeslots":[
-              "2020"
+              "2019"
            ]
         },
         {
@@ -192,15 +192,9 @@
            ]
         },
         {
-           "title":"kubernetes",
+           "title":"kubernetes /w helmet",
            "timeslots":[
              "2018-2020" 
-           ]
-        },
-        {
-           "title":"helmet",
-           "timeslots":[
-            "2018-2020"
            ]
         }
      ]
