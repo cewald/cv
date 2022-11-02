@@ -19,7 +19,7 @@
     <div
       v-for="{ title, subTitle, percentTimeslots } in skills"
       :key="title"
-      class="flex items-center leading-tight"
+      class="flex items-center leading-snug"
     >
       <template
         v-for="({ width, start }, i) in percentTimeslots"
@@ -35,7 +35,10 @@
           :class="[start === 0 ? 'flex-auto' : 'flex-fix']"
           :style="{ width: width + '%' }"
         />
-        <div class="flex-auto pl-1 text-gray-light">
+        <div
+          class="flex-auto pl-1 text-gray-light"
+          v-if="i === percentTimeslots.length - 1"
+        >
           {{ title }}
           <span v-if="subTitle" v-text="subTitle" class="text-gray-lighter" />
         </div>
@@ -86,15 +89,23 @@ export default {
 
           skill.percentTimeslots = skill.timestampedTimeslots
             // Map start/stop time in %
-            .map((i) => ({
-              start: this.timeStampToPercent(i.start),
-              stop: i.stop ? this.timeStampToPercent(i.stop) : undefined
+            .map(({ start, stop }) => ({
+              start: this.timeStampToPercent(start),
+              stop: stop ? this.timeStampToPercent(stop) : undefined
             }))
             // Map bar-width in %
             .map(({ start, stop }) => {
               const width: number =
                 stop && stop > 0 ? stop - start : 100 - start
               return { start, stop, width }
+            })
+            // Reset start point if slot has prepending slots
+            .map((s, i, arr) => {
+              if (i > 0) {
+                const { width: w } = arr[i - 1]
+                s.start = s.start + w
+              }
+              return s
             })
 
           return skill
