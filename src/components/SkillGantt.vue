@@ -33,7 +33,7 @@
           class="flex-fix"
         />
         <div
-          class="h-2.5 rounded-sm bg-gray-lightest-1 text-right"
+          class="h-2 rounded-sm bg-gray-lightest-1 text-right"
           :class="[start === 0 ? 'flex-auto' : 'flex-fix']"
           :style="{ width: width + '%' }"
         />

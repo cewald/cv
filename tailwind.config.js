@@ -19,7 +19,7 @@ module.exports = {
       },
       colors: {
         'gray-lightest-2': '#eeeeee',
-        'gray-lightest-1': '#dddddd',
+        'gray-lightest-1': '#d3d3d3',
         'gray-lightest': '#eeeeee',
         'gray-lighter': '#999999',
         'gray-light': '#666666',
