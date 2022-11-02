@@ -39,15 +39,9 @@
            ]
         },
         {
-           "title":"vite",
+           "title":"vite + esbuild",
            "timeslots":[
               "2021"
-           ]
-        },
-        {
-           "title":"esbuild",
-           "timeslots":[
-            "2021"
            ]
         }
      ]
