@@ -33,12 +33,12 @@
           class="flex-fix"
         />
         <div
-          class="chart-bar h-2.5 rounded-sm bg-gray-lightest-1 text-right"
+          class="h-2.5 rounded-sm bg-gray-lightest-1 text-right"
           :class="[start === 0 ? 'flex-auto' : 'flex-fix']"
           :style="{ width: width + '%' }"
         />
         <div
-          class="chart-bar-title flex-auto pl-1 text-gray-base"
+          class="flex-auto pl-1 text-gray-base"
           v-if="i === percentTimeslots.length - 1"
         >
           {{ title }}
@@ -166,41 +166,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.chart-bar {
-  @keyframes grow-bars {
-    0% {
-      transform: scaleX(0%);
-    }
-    50% {
-      transform: scaleX(0%);
-    }
-    100% {
-      transform: scaleX(100%);
-    }
-  }
-
-  animation: grow-bars 2s linear;
-  transform-origin: left;
-}
-
-.chart-bar-title {
-  @keyframes fade-title {
-    0% {
-      opacity: 0;
-      transform: translateX(-25%);
-    }
-    50% {
-      opacity: 0;
-      transform: translateX(-25%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0%);
-    }
-  }
-
-  animation: fade-title 2s ease-in-out;
-}
-</style>
