@@ -38,7 +38,7 @@
           :style="{ width: width + '%' }"
         />
         <div
-          class="flex-auto pl-1 text-gray-light"
+          class="flex-auto pl-1 text-gray-base"
           v-if="i === percentTimeslots.length - 1"
         >
           {{ title }}
