@@ -10,7 +10,6 @@
     <div class="flex items-baseline font-mono text-gray-lighter">
       <div class="mr-0.5 h-3 w-1.5 border-b border-gray-lighter" />
       <div class="mb-0 text-xs">{{ section }}</div>
-      <!-- <div class="ml-1 h-3 grow border-b border-gray-lightest" /> -->
     </div>
     <div
       v-for="{ title, subTitle, percentTimeslots } in skills"
@@ -27,7 +26,7 @@
           class="flex-fix"
         />
         <div
-          class="h-3 rounded bg-gray-lightest text-right"
+          class="h-3 rounded bg-gray-lightest-1 text-right"
           :class="[start === 0 ? 'flex-auto' : 'flex-fix']"
           :style="{ width: width + '%' }"
         />
