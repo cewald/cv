@@ -79,7 +79,7 @@
       <div class="pt-4 pl-12">
         <SectionWrapper title="Profile">
           I'm an experienced enthusiast in all stages of advanced full-stack
-          development and engineering, with strong knowledge in
+          development and engineering. With strong knowledge in
           coding-paradigms, continuous-integration, testing and debugging
           processes. Bringing forth experience and expertise in designing,
           installation, testing and maintaining complex code-infrastructure,
