@@ -1,10 +1,12 @@
 <template>
-  <div class="mb-1 flex justify-between font-mono text-xxs">
+  <div class="relative mb-1 h-4 font-mono text-xxs">
     <div
-      v-for="(year, i) in yearScale"
+      v-for="({ year, percent }, i) in yearScale"
       :key="`year-scale-${year}`"
       v-text="year"
-      class="border-r border-gray-lightest-1 pr-1"
+      class="absolute top-0 border-gray-lightest-1 px-1"
+      :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
+      :style="{ left: 100 - percent + '%' }"
     />
   </div>
   <div
@@ -70,7 +72,7 @@ type SkillSetSection = {
 export default {
   setup() {
     const skillset = ref(Skillset)
-    const endDate = ref(new Date())
+    const endDate = ref(new Date(new Date().getFullYear().toString()))
 
     return {
       skillset,
@@ -135,6 +137,10 @@ export default {
         4
       )
         .map((y) => Math.round(y))
+        .map((year) => ({
+          year,
+          percent: this.timeStampToPercent(new Date(year.toString()))
+        }))
         .reverse()
     }
   },
