@@ -1,25 +1,27 @@
 <template>
-  <div class="browser-actions px-4 pt-4" v-if="!isFullscreen">
-    <ToolbarButton
-      title="Zoom"
-      href="#zoom"
-      @click.prevent.stop="toggleFullScreen"
-    >
-      <IconZoom width="2rem" height="2rem" />
-    </ToolbarButton>
-    <ToolbarButton title="Download" href="/cewald-cv.pdf" download>
-      <IconDownload width="2rem" height="2rem" />
-    </ToolbarButton>
-    <ToolbarButton title="Print" href="#print" @click.prevent="print">
-      <IconPrint width="2rem" height="2rem" />
-    </ToolbarButton>
-    <ToolbarButton
-      title="Source"
-      href="https://github.com/cewald/cv"
-      target="_blank"
-    >
-      <IconSource width="2rem" height="2rem" />
-    </ToolbarButton>
+  <div class="browser-actions h-full" v-if="!isFullscreen">
+    <div class="sticky top-0 px-4 pt-4">
+      <ToolbarButton
+        title="Zoom"
+        href="#zoom"
+        @click.prevent.stop="toggleFullScreen"
+      >
+        <IconZoom width="2rem" height="2rem" />
+      </ToolbarButton>
+      <ToolbarButton title="Download" href="/cewald-cv.pdf" download>
+        <IconDownload width="2rem" height="2rem" />
+      </ToolbarButton>
+      <ToolbarButton title="Print" href="#print" @click.prevent="print">
+        <IconPrint width="2rem" height="2rem" />
+      </ToolbarButton>
+      <ToolbarButton
+        title="Source"
+        href="https://github.com/cewald/cv"
+        target="_blank"
+      >
+        <IconSource width="2rem" height="2rem" />
+      </ToolbarButton>
+    </div>
   </div>
 </template>
 
