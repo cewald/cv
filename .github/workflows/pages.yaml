@@ -28,6 +28,10 @@ jobs:
         run: npm ci
       - name: Build app
         run: npm run build
+      - name: Create PDF
+        run: |
+          npm i global puppeteer
+          node scripts/pdf.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
