@@ -1,4 +1,4 @@
-# cewald.github.io/cv
+# cewald.github.io/cv [![Deploy to GitHub Pages](https://github.com/cewald/cv/actions/workflows/pages.yaml/badge.svg)](https://github.com/cewald/cv/actions/workflows/pages.yaml)
 
 This is the code-repository for my [online resumé](https://cewald.github.io/cv/).  
 *– have a look at it, it's a small POC as well ;)*
