@@ -14,9 +14,13 @@ export default defineConfig({
     vue(),
     vueJsx(),
     svgLoader(),
-    webfontDownload([
-      'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Mono:wght@400;700&display=swap'
-    ]),
+    webfontDownload(
+      [
+        'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap',
+        'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap'
+      ],
+      { injectAsStyleTag: false, minifyCss: true }
+    ),
     Icons({})
   ],
   resolve: {
