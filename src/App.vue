@@ -24,7 +24,7 @@
               title="Telephone"
               class="hover:underline"
             >
-              +49 (0) 163 877 822 8
+              +49 (0) 123 456 789 8
             </a>
           </p>
           <h3>Email</h3>
