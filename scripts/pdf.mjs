@@ -1,8 +1,10 @@
 import puppeteer from 'puppeteer'
 ;(async () => {
+  console.log('Creating pdf ...')
+
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
-  await page.goto('https://cewald.github.io/cv/', {
+  await page.goto('http://localhost:4173/cv/', {
     waitUntil: 'networkidle2'
   })
   await page.setViewport({ width: 1680, height: 1050 })
@@ -13,4 +15,5 @@ import puppeteer from 'puppeteer'
   })
 
   await browser.close()
+  console.log('Done')
 })()

@@ -30,7 +30,8 @@ jobs:
         run: npm run build
       - name: Create PDF
         run: |
-          npm i global puppeteer
+          npm run preview &
+          npm i global puppeteer &&
           node scripts/pdf.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v2
