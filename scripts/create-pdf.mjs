@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer'
-;(async () => {
+
+const createPDF = async () => {
   console.log('Creating pdf ...')
 
   const browser = await puppeteer.launch()
@@ -16,4 +17,6 @@ import puppeteer from 'puppeteer'
 
   await browser.close()
   console.log('Done')
-})()
+}
+
+createPDF()

@@ -35,5 +35,5 @@ npm run lint
 ### Create QR code if needed with [qrcode-svg](https://www.npmjs.com/package/qrcode-svg)
 
 ```sh
-node scripts/qrcode.mjs
+node scripts/create-qrcode.mjs
 ```
