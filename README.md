@@ -1,7 +1,5 @@
-# CV/Resumé of Christian Ewald
-
-This is the repositoriy for my online-cv visible at https://cewald.github.io/cv/  
-– have a look, it's a small POC as well
+This is the repositoriy for my [online resumé](https://cewald.github.io/cv/) visible.  
+*– have a look at it, it's a small POC as well ;)*
 
 ## Project Setup
 
