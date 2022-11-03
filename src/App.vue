@@ -1,11 +1,9 @@
 <template>
   <div
     class="din-container flex flex-col justify-items-stretch print:my-0 print:shadow-none"
-    :class="[
-      isFullscreen ? 'cursor-zoom-out' : 'my-4 cursor-zoom-in shadow-cnt'
-    ]"
+    :class="[isFullscreen ? 'cursor-zoom-out' : 'my-4 shadow-cnt']"
+    @click="isFullscreen && toggleFullscreen()"
     ref="dinPage"
-    @click="toggleFullScreen"
   >
     <HeaderBlock />
     <div class="flex grow px-12 py-8">
@@ -90,6 +88,11 @@
         </SectionWrapper>
       </div>
     </div>
+    <Toolbar
+      class="absolute top-0 right-0 translate-x-full"
+      :is-fullscreen="isFullscreen"
+      :toggle-full-screen="toggleFullscreen"
+    />
   </div>
 </template>
 
@@ -101,6 +104,7 @@ import IconGitHub from '~icons/fa-brands/github'
 import IconLinkedIn from '~icons/fa-brands/linkedin'
 import IconLanguage from '~icons/fa6-regular/id-card'
 import QRCode from '@/assets/qrcode.svg?url'
+import Toolbar from '@/components/ToolbarBlock.vue'
 
 import { ref } from 'vue'
 import emScaling from '@/composables/scaleEm'
@@ -108,7 +112,7 @@ import emScaling from '@/composables/scaleEm'
 const dinPage = ref<HTMLInputElement | null>(null)
 const doc = ref<HTMLElement>(document.documentElement)
 
-const { isFullscreen, toggleFullScreen } = emScaling(dinPage, doc)
+const { isFullscreen, toggleFullscreen } = emScaling(dinPage, doc)
 </script>
 
 <style lang="scss">

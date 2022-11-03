@@ -27,7 +27,7 @@ export default (
     doc.value.style.setProperty('font-size', `${fullScreenEmPxSize.value}px`)
   }
 
-  const toggleFullScreen = () => {
+  const toggleFullscreen = () => {
     if (!dinPage.value) return
 
     dinPage.value?.style.setProperty('--oneEmInPx', `${rootEmInPx.value}`)
@@ -54,7 +54,7 @@ export default (
   })
 
   return {
-    toggleFullScreen,
+    toggleFullscreen,
     isFullscreen,
     fullScreenEmPxSize
   }

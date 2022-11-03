@@ -14,9 +14,9 @@
     "vue": "^3.2.41"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.1.9",
     "@iconify-json/fa-brands": "^1.1.2",
     "@iconify-json/fa6-regular": "^1.1.6",
+    "@iconify-json/ic": "^1.1.9",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/node": "^16.11.68",
     "@vitejs/plugin-vue": "^3.1.2",
