@@ -1,6 +1,6 @@
 <template>
   <a
-    class="mb-2 flex items-center text-gray-lighter hover:text-gray-base"
+    class="mb-3 flex items-center text-gray-lightest-1 hover:text-gray-base"
     :title="title"
   >
     <slot />
