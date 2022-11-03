@@ -1,4 +1,6 @@
-This is the repositoriy for my [online resumé](https://cewald.github.io/cv/) visible.  
+# cewald.github.io/cv
+
+This is the repositoriy for my [online resumé](https://cewald.github.io/cv/).  
 *– have a look at it, it's a small POC as well ;)*
 
 ## Project Setup
