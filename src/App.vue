@@ -67,9 +67,9 @@
         </SectionWrapper>
         <SectionWrapper title="Languages">
           German
-          <span class="text-xxs text-gray-light">_native speaker</span><br />
+          <span class="text-xxxs text-gray-light">_native speaker</span><br />
           English
-          <span class="text-xxs text-gray-light">_highly proficient</span>
+          <span class="text-xxxs text-gray-light">_highly proficient</span>
         </SectionWrapper>
         <div class="grow"></div>
         <img :src="QRCode" class="mb-4 h-20 w-20" />
