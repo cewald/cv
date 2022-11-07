@@ -8,7 +8,7 @@
       >
         <IconZoom width="2rem" height="2rem" />
       </ToolbarButton>
-      <ToolbarButton title="Download" href="/cewald-cv.pdf" download>
+      <ToolbarButton title="Download" href="cewald-cv.pdf" download>
         <IconDownload width="2rem" height="2rem" />
       </ToolbarButton>
       <ToolbarButton title="Print" href="#print" @click.prevent="print">
