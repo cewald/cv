@@ -85,7 +85,11 @@ export default {
         section.skills.map((skill) => {
           // Map year as JS date
           skill.timestampedTimeslots = skill.timeslots.map((s) => {
-            const [start, stop] = s.split('-').map((v) => new Date(v))
+            let [start, stop] = s.split('-').map((v) => new Date(v))
+            if (start.getFullYear() < this.startDate.getFullYear()) {
+              start = this.startDate
+            }
+
             return { start, stop }
           })
 
@@ -128,6 +132,12 @@ export default {
       })
 
       const firstYear = slots.reduce((a, b) => (a > b ? b : a))
+
+      const endDate = this.endDate.getFullYear()
+      if (firstYear < endDate - 12) {
+        return new Date((endDate - 12).toString())
+      }
+
       return new Date(firstYear.toString())
     },
     yearScale() {
