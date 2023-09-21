@@ -4,7 +4,10 @@
     :title="title"
   >
     <slot />
-    <span v-text="title" class="sr-only" />
+    <span
+      class="sr-only"
+      v-text="title"
+    />
   </a>
 </template>
 

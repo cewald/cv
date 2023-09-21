@@ -7,14 +7,15 @@
   >
     <HeaderBlock />
     <div class="flex grow px-12 py-8">
-      <div class="flex w-42 flex-col border-r border-gray-300 pt-4 pr-12">
+      <div class="flex w-42 flex-col border-r border-gray-300 pr-12 pt-4">
         <SectionWrapper title="Details">
-          <h3>Address</h3>
+          <h3>Based in</h3>
           <p>
-            Fregestr. 26<br>
             04105 Leipzig<br>
             Germany
           </p>
+          <h3>Age</h3>
+          <p>36 years</p>
           <h3>Phone</h3>
           <p>
             <a
@@ -36,8 +37,6 @@
               hello@christianewald.de
             </a>
           </p>
-          <h3>DOB</h3>
-          <p>14.06.1987</p>
         </SectionWrapper>
         <SectionWrapper title="Links">
           <a
@@ -89,7 +88,7 @@
           class="mb-4 h-20 w-20"
         >
       </div>
-      <div class="pt-4 pl-12">
+      <div class="pl-12 pt-4">
         <SectionWrapper title="Profile">
           I am a dedicated professional with a passion for advanced full-stack
           development and engineering, boasting comprehensive expertise across
@@ -109,7 +108,7 @@
       </div>
     </div>
     <Toolbar
-      class="absolute top-0 right-0 translate-x-full"
+      class="absolute right-0 top-0 translate-x-full"
       :is-fullscreen="isFullscreen"
       :toggle-full-screen="toggleFullscreen"
     />

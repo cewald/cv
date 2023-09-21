@@ -3,10 +3,10 @@
     <div
       v-for="({ year, percent }, i) in yearScale"
       :key="`year-scale-${year}`"
-      v-text="year"
       class="absolute top-0 border-gray-lightest-1 px-1"
       :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
       :style="{ left: 100 - percent + '%' }"
+      v-text="year"
     />
   </div>
   <div
@@ -16,7 +16,9 @@
   >
     <div class="flex items-baseline font-mono text-gray-lighter">
       <div class="mr-0.5 h-3 w-1.5 border-b border-gray-lighter" />
-      <div class="mb-0 text-xxs">{{ section }}</div>
+      <div class="mb-0 text-xxs">
+        {{ section }}
+      </div>
     </div>
     <div
       v-for="{ title, subTitle, percentTimeslots } in skills"
@@ -28,21 +30,25 @@
         :key="'bar-' + title + i"
       >
         <div
-          :style="{ width: 100 - start - width + '%' }"
           v-if="100 - start - width > 0"
+          :style="{ width: 100 - start - width + '%' }"
           class="flex-fix"
         />
         <div
           class="h-2 rounded-sm bg-gray-lightest-1 text-right"
-          :class="[start === 0 ? 'flex-auto' : 'flex-fix flex-shrink']"
+          :class="[start === 0 ? 'flex-auto' : 'flex-fix shrink']"
           :style="{ width: width + '%' }"
         />
         <div
-          class="flex-auto pl-1 text-gray-base"
           v-if="i === percentTimeslots.length - 1"
+          class="flex-auto pl-1 text-gray-base"
         >
           {{ title }}
-          <span v-if="subTitle" v-text="subTitle" class="text-gray-lighter" />
+          <span
+            v-if="subTitle"
+            class="text-gray-lighter"
+            v-text="subTitle"
+          />
         </div>
       </template>
     </div>
@@ -81,11 +87,11 @@ export default {
   },
   computed: {
     skillsetStruct() {
-      return ([...this.skillset] as SkillSetSection[]).map((section) => {
-        section.skills.map((skill) => {
+      return ([...this.skillset] as SkillSetSection[]).map(section => {
+        section.skills.map(skill => {
           // Map year as JS date
-          skill.timestampedTimeslots = skill.timeslots.map((s) => {
-            let [start, stop] = s.split('-').map((v) => new Date(v))
+          skill.timestampedTimeslots = skill.timeslots.map(s => {
+            let [start, stop] = s.split('-').map(v => new Date(v))
             if (start.getFullYear() < this.startDate.getFullYear()) {
               start = this.startDate
             }
@@ -121,10 +127,10 @@ export default {
     },
     startDate() {
       const slots: number[] = []
-      Skillset.forEach((section) => {
+      Skillset.forEach(section => {
         for (const skill of section.skills) {
           const startSlots = skill.timeslots.map(
-            (s) => s.split('-').map((v) => parseInt(v))[0]
+            s => s.split('-').map(v => parseInt(v))[0]
           )
 
           slots.push(...startSlots)
@@ -146,8 +152,8 @@ export default {
         this.startDate.getFullYear(),
         4
       )
-        .map((y) => Math.round(y))
-        .map((year) => ({
+        .map(y => Math.round(y))
+        .map(year => ({
           year,
           percent: this.timeStampToPercent(new Date(year.toString()))
         }))

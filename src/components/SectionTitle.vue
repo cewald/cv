@@ -7,7 +7,9 @@ defineProps<{
 
 <template>
   <h2
-    class="mb-4 font-mono text-lg font-bold text-gray-dark after:mt-1 after:block after:h-0.85 after:w-12 after:bg-gray-dark after:content-['']"
+    class="mb-4 font-mono text-lg font-bold
+    after:block after:h-0.85 after:w-12
+    after:bg-gray-dark after:content-['']"
   >
     {{ title }}
     <span

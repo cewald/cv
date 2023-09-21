@@ -5,12 +5,17 @@ import Logo from '@/assets/logo.svg?url'
 <template>
   <header class="header flex font-mono text-gray-dark">
     <div class="header__logo flex items-start justify-end">
-      <img :src="Logo" alt="Logo" />
+      <img
+        :src="Logo"
+        alt="Logo"
+      >
     </div>
     <div class="header__title antialiased">
-      <h1 class="font-bold">Christian Ewald</h1>
+      <h1 class="font-bold">
+        Christian Ewald
+      </h1>
       <p>
-        senior full-stack javascript developer<br />
+        senior full-stack javascript developer<br>
         and software-engineer
       </p>
     </div>

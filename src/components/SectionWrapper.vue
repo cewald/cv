@@ -9,7 +9,10 @@ defineProps<{
 
 <template>
   <section class="mb-7 text-xs leading-normal text-gray-base antialiased">
-    <SectionTitle :title="title" :sub-title="subTitle" />
+    <SectionTitle
+      :title="title"
+      :sub-title="subTitle"
+    />
     <slot />
   </section>
 </template>
