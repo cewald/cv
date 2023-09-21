@@ -13,6 +13,19 @@
     }
   },
   "forwardPorts": [
-    3000
-  ]
+    3000,
+    4173
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "dev",
+      "protocol": "https",
+      "elevateIfNeeded": false
+    },
+    "4173": {
+      "label": "preview",
+      "protocol": "https",
+      "elevateIfNeeded": false
+    }
+  }
 }
