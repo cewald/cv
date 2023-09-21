@@ -15,7 +15,7 @@
             Germany
           </p>
           <h3>Age</h3>
-          <p>36 years</p>
+          <p>{{ age }} years</p>
           <h3>Phone</h3>
           <p>
             <a
@@ -127,11 +127,17 @@ import Toolbar from "@/components/ToolbarBlock.vue"
 
 import { ref } from "vue"
 import emScaling from "@/composables/scaleEm"
+import dayjs from 'dayjs'
 
 const dinPage = ref<HTMLInputElement | null>(null)
 const doc = ref<HTMLElement>(document.documentElement)
 
 const { isFullscreen, toggleFullscreen } = emScaling(dinPage, doc)
+
+const now = dayjs()
+const dob = dayjs.unix(550627200)
+const age = now.diff(dob, 'years')
+
 </script>
 
 <style lang="scss">
