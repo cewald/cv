@@ -116,17 +116,17 @@
 </template>
 
 <script setup lang="ts">
-import HeaderBlock from "@/components/HeaderBlock.vue"
-import SectionWrapper from "@/components/SectionWrapper.vue"
-import SkillGantt from "@/components/SkillGantt.vue"
-import IconGitHub from "~icons/fa-brands/github"
-import IconLinkedIn from "~icons/fa-brands/linkedin"
-import IconLanguage from "~icons/fa6-regular/id-card"
-import QRCode from "@/assets/qrcode.svg?url"
-import Toolbar from "@/components/ToolbarBlock.vue"
+import HeaderBlock from '@/components/HeaderBlock.vue'
+import SectionWrapper from '@/components/SectionWrapper.vue'
+import SkillGantt from '@/components/SkillGantt.vue'
+import IconGitHub from '~icons/fa-brands/github'
+import IconLinkedIn from '~icons/fa-brands/linkedin'
+import IconLanguage from '~icons/fa6-regular/id-card'
+import QRCode from '@/assets/qrcode.svg?url'
+import Toolbar from '@/components/ToolbarBlock.vue'
 
-import { ref } from "vue"
-import emScaling from "@/composables/scaleEm"
+import { ref } from 'vue'
+import emScaling from '@/composables/scaleEm'
 import dayjs from 'dayjs'
 
 const dinPage = ref<HTMLInputElement | null>(null)

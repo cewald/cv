@@ -20,6 +20,7 @@ module.exports = {
     'indent': ['error', 2],
     'max-len': ['error', { code: 120 }],
     'object-curly-spacing': ['error', 'always'],
+    'quotes': [2, 'single', { avoidEscape: true, allowTemplateLiterals: false }],
     'import/no-unresolved': 0,
     'arrow-parens': ['error', 'as-needed'],
     'eol-last': ['error', 'always'],
