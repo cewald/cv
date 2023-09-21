@@ -3,13 +3,15 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
-  'extends': [
+  extends: [
     'eslint:recommended',
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-recommended',
     'plugin:vue/vue3-strongly-recommended',
-    '@vue/eslint-config-typescript'
+    '@vue/eslint-config-typescript',
+    'plugin:tailwindcss/recommended'
   ],
+  plugins: ['tailwindcss'],
   parserOptions: {
     ecmaVersion: 'latest'
   },
@@ -20,6 +22,9 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'import/no-unresolved': 0,
     'arrow-parens': ['error', 'as-needed'],
+    'eol-last': ['error', 'always'],
+    'no-trailing-spaces': ['error'],
+    'tailwindcss/no-custom-classname': 0
   },
   overrides: [
     {
