@@ -90,7 +90,7 @@
       </div>
       <div class="pl-12 pt-4">
         <SectionWrapper title="Profile">
-          I am a dedicated professional with a passion for advanced full-stack
+          A dedicated professional with a passion for advanced full-stack
           development and engineering, boasting comprehensive expertise across
           the entire software development lifecycle. My proficiency extends to
           coding paradigms, continuous integration, meticulous testing, and
