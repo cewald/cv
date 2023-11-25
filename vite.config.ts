@@ -16,8 +16,8 @@ export default defineConfig({
     svgLoader(),
     webfontDownload(
       [
-        'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap',
-        'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap'
+        'https://rsms.me/inter/inter.css',
+        'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap'
       ],
       { injectAsStyleTag: false, minifyCss: true }
     ),

@@ -10,12 +10,12 @@ import Logo from '@/assets/logo.svg?url'
         alt="Logo"
       >
     </div>
-    <div class="header__title antialiased">
+    <div class="header__title lowercase antialiased">
       <h1 class="font-bold">
         Christian Ewald
       </h1>
       <p>
-        senior full-stack javascript developer<br>
+        Senior full-stack javascript developer<br>
         and software-engineer
       </p>
     </div>

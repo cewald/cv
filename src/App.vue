@@ -7,7 +7,22 @@
   >
     <HeaderBlock />
     <div class="flex grow px-12 py-8">
-      <div class="flex w-42 flex-col border-r border-gray-300 pr-12 pt-4">
+      <div class="order-2 grow pl-12 pt-4">
+        <SectionWrapper title="Profile">
+          A devoted professional with a fervor for advanced full-stack development and engineering,
+          showcasing comprehensive expertise throughout the entire software development lifecycle.
+          My proficiency encompasses coding paradigms, continuous integration, rigorous testing, and
+          adept debugging processes. I have a proven record of effectively designing, implementing,
+          testing, and maintaining intricate code infrastructure.
+        </SectionWrapper>
+        <SectionWrapper
+          title="Skillset "
+          sub-title="_chronolocical"
+        >
+          <SkillGantt />
+        </SectionWrapper>
+      </div>
+      <div class="order-1 flex w-42 flex-col pr-10 pt-4">
         <SectionWrapper title="Details">
           <h3>Based in</h3>
           <p>
@@ -40,7 +55,7 @@
         </SectionWrapper>
         <SectionWrapper title="Links">
           <a
-            href="https://www.christianewald.de"
+            href="https://www.cewald.de"
             target="_blank"
             class="mb-1.5 flex items-center hover:underline"
           >
@@ -49,7 +64,7 @@
               width="1rem"
               height="1rem"
             />
-            www.christianewald.de
+            www.cewald.de
           </a>
           <a
             href="https://github.com/cewald"
@@ -87,24 +102,6 @@
           :src="QRCode"
           class="mb-4 h-20 w-20"
         >
-      </div>
-      <div class="pl-12 pt-4">
-        <SectionWrapper title="Profile">
-          A dedicated professional with a passion for advanced full-stack
-          development and engineering, boasting comprehensive expertise across
-          the entire software development lifecycle. My proficiency extends to
-          coding paradigms, continuous integration, meticulous testing, and
-          adept debugging processes. I bring a wealth of experience and skill to
-          the table, having successfully designed, installed, tested, and
-          maintained intricate code infrastructure. My versatile skill-set is
-          poised to drive innovation to your solution.
-        </SectionWrapper>
-        <SectionWrapper
-          title="Skillset "
-          sub-title="_chronolocical"
-        >
-          <SkillGantt />
-        </SectionWrapper>
       </div>
     </div>
     <Toolbar

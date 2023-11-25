@@ -14,8 +14,8 @@ module.exports = {
         xxxs: '0.6rem'
       },
       fontFamily: {
-        sans: ['Roboto', ...defaultTheme.fontFamily.sans],
-        mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono]
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        mono: ['Fira Code', ...defaultTheme.fontFamily.mono]
       },
       colors: {
         'gray-lightest-2': '#eeeeee',
