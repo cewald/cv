@@ -92,9 +92,9 @@
           </a>
         </SectionWrapper>
         <SectionWrapper title="Languages">
-          German
+          <span class="lowercase">German</span>
           <span class="text-xxxs text-gray-light">_native speaker</span><br>
-          English
+          <span class="lowercase">English</span>
           <span class="text-xxxs text-gray-light">_highly proficient</span>
         </SectionWrapper>
         <div class="grow" />
