@@ -1,8 +1,8 @@
 <template>
   <div
     ref="dinPage"
-    class="din-container flex flex-col justify-items-stretch print:my-0 print:shadow-none"
-    :class="[isFullscreen ? 'cursor-zoom-out' : 'my-4 shadow-cnt']"
+    class="din-container flex flex-col justify-items-stretch print:my-0 print:border-0"
+    :class="[isFullscreen ? 'cursor-zoom-out' : 'my-4 border border-gray-lightest-2']"
     @click="isFullscreen && toggleFullscreen()"
   >
     <HeaderBlock />
