@@ -44,12 +44,12 @@
           <h3>Email</h3>
           <p>
             <a
-              href="mailto:hello@christianewald.de"
+              href="mailto:hello@cewald.de"
               title="Email"
               target="_blank"
               class="hover:underline"
             >
-              hello@christianewald.de
+              hello@cewald.de
             </a>
           </p>
         </SectionWrapper>
