@@ -9,7 +9,7 @@
     <div class="flex grow px-12 py-8">
       <div class="order-2 grow pl-12 pt-4">
         <SectionWrapper title="Profile">
-          A devoted professional with a fervor for advanced full-stack development and engineering,
+          A dedicated professional with a gusto for advanced full-stack development and engineering,
           showcasing comprehensive expertise throughout the entire software development lifecycle.
           My proficiency encompasses coding paradigms, continuous integration, rigorous testing, and
           adept debugging processes. I have a proven record of effectively designing, implementing,
